@@ -86,7 +86,7 @@ const util = {
 
     },
     clearCheck() {
-        $("#tark").val("");
+        $(_DOM.hetuCheckInput).val("");
     },
     randomBetween(min, max) {
         return Math.floor(Math.random() * (+max - +min)) + +min;
@@ -97,7 +97,7 @@ const util = {
         for (let field of fieldName) {
             res += util.getFieldValue(field);
         }
-        res += $("#tark").val();
+        res += $(_DOM.hetuCheckInput).val();
         return res;
     }
 }
