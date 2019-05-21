@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <title>Hetugeneraattori</title>
+        <meta charset="UTF-8">
+        <script
+        src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+        crossorigin="anonymous"></script>
+        <script src="hetugen.js"></script>
+        <style>
+            input.hetufield {
+                padding: 0.2em;
+                margin-left: -2em;
+                margin: 0.4em;
+                border-radius: 20%;
+            }
+            input.hetufield:focus, input.hetufield:active {
+                border: 3px solid blue;
+                background: lightblue;
+            }
+            input.date-error {
+                background: lightyellow;
+            }
+            input.field_error {
+                background: lightpink;
+                border: solid 5px red !important;
+            }
+            input.field_error {
+                background: lightpink;
+                border: solid 5px red;
+            }
+            input.field_input {
+                background: none;
+                border: 2px solid green;
+            }
+
+            li.result-cont a {
+                margin-left: 2em;
+                display: none;
+            }
+            li.result-cont:hover a {
+                display: inline;
+            }
+        </style>
+    </head>
+    <body onload="setup();">
+        <h1>Luo itsellesi hetu</h1>
+        <div class="hetu">
+            <input type="text" class="hetu hetufield" id="hetu0" maxlength="1" size="1" /> <!-- pvm -->
+            <input type="text" class="hetu hetufield" id="hetu1" maxlength="1" />
+            <input type="text" class="hetu hetufield" id="hetu2" maxlength="1" /> <!-- kk -->
+            <input type="text" class="hetu hetufield" id="hetu3" maxlength="1" />
+            <input type="text" class="hetu hetufield" id="hetu4" maxlength="1" /> <!-- vv -->
+            <input type="text" class="hetu hetufield" id="hetu5" maxlength="1" />
+            <input type="text" class="hetu hetufield" id="hetu6" maxlength="1" /> <!-- merkki -->
+            <input type="text" class="hetu hetufield" id="hetu7" maxlength="1" /> <!-- sukup -->
+            <input type="text" class="hetu hetufield" id="hetu8" maxlength="1" /> <!-- xx -->
+            <input type="text" class="hetu hetufield" id="hetu9" maxlength="1" />
+            <input type="text" class="hetufield" id="tark" length="1" disabled="disabled" /> <!-- tark -->
+            <button onclick="luoHetu()">Luo hetu</button>
+        </div>
+        <div class="luodut">
+            <ul id="luodut">
+
+            </ul>
+        </div>
+    </body>
+</html>
